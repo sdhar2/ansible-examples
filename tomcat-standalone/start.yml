@@ -1,0 +1,11 @@
+---
+hosts: all
+remote_user: root
+become: yes
+become_method: sudo
+tasks:
+  - name: Start Tomcat
+    service:
+      name: tomcat
+      state: started
+...
